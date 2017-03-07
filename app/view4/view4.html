@@ -36,7 +36,7 @@
     <my-alert :alert-message="alertMessage" ref="myAlert"></my-alert>
 </div>
 <style lang="scss" scoped>
-    .new-qn {
+    new-qn {
         width: 60%;
         margin: 10% auto;
         overflow: hidden;
@@ -52,9 +52,11 @@
         border: none;
         text-align: center;
         font-size: 30px;
+        text-align: center;
+
     }
      /*分割线*/
-       hr {
+    .hr {
            margin: 20px 0;
        }
      /*添加问卷的大框*/
@@ -67,7 +69,7 @@
            cursor: pointer;
            background: rgba(250, 255, 158, 0.59);
        }
-    :before {
+    .before {
          content: '';
          display: inline-block;
          height: 100%;
@@ -101,7 +103,7 @@
         cursor: pointer;
         background: #fff;
     }
-    :hover {
+    .hover {
          color: #fff;
          background: #42B983;
      }
@@ -113,10 +115,10 @@
         text-align: center;
         transition: height .3s ease;
     }
-    show {
+    .show {
          height: 55px;
      }
-    div {
+    .div {
         display: inline-block;
         margin: 0 10px;
         padding: 10px 20px;
@@ -126,7 +128,7 @@
         box-shadow: 0 3px 6px #999;
         cursor: pointer;
     }
-    i {
+    .i {
          margin-right: 5px;
          font-size: 18px;
          vertical-align: middle;
@@ -134,7 +136,7 @@
     .icon-1:before {
         content: "\e624";
     }
-    .icon-duoxuan:before {
+    .con-duoxuan:before {
         content: "\e608";
     }
     .icon-c_icon2:before {
@@ -146,22 +148,20 @@
            padding: 20px 40px;
            font-size: 18px;
        }
-    :hover {
+    .hover {
         background: #fef1e8;
     }
-    input,
-    textarea {
+    .textarea {
         background: #fef1e8;
     }
 
-    input {
+    .input {
         border: none;
     }
     .item {
         height: 25px;
         margin: 10px 0 10px 30px;
     }
-    :hover
     .icon-x:before {
         content: "\e62a";
         color: #f00;
