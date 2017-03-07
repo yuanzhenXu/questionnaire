@@ -1,4 +1,4 @@
-<div class="new-qn" ng-if="">
+<div class="new-qn" ng-if="" ng-controller="View5Ctrl" ng-app="myApp.view5">
     <h2 class="title">{{title}}</h2>
     <hr>
     <div class="qnlist" ng-for="(qn, index1) in viewData.qns">
@@ -10,6 +10,12 @@
         <router-link to="/list" class="btns"><span>确定</span></router-link>
     </footer>
 </div>
+<script src="view5.js">
+    var app = angular.module('myApp.view5',[]);
+    app.controller('View5Ctrl',function ($scope) {
+        $scope.title='hello';
+    })
+</script>
 <style lang="scss" scoped>
     .new-qn {
         width: 60%;

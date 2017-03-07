@@ -1,5 +1,5 @@
-<div class="new-qn">
-    <input class="title" type="text" autocomplete="off" placeholder="请填写问卷标题" ng-model="ns.title">
+<div class="new-qn" ng-controller="View4Ctrl" ng-app="myApp.view4">
+    <input class="title" type="text" autocomplete="off" placeholder="请填写问卷标题" ng-model="title">
     <hr>
     <div class="qnlist" ng-for="(qn, index1) in aQns.qns">
         <div><span>{{'Q' + (index1 + 1) + '：'}}</span><input class="qn-title" type="text" ng-model="qn.question" @focus="select"></div>
@@ -35,6 +35,12 @@
     </footer>
     <my-alert :alert-message="alertMessage" ref="myAlert"></my-alert>
 </div>
+<script src="view4.js">
+    var app = angular.module('myApp.view4', []);
+    app.controller('View4Ctrl', function($scope) {
+        $scope.title = "John Doe";
+    });
+</script>
 <style lang="scss" scoped>
     new-qn {
         width: 60%;

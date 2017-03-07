@@ -1,4 +1,4 @@
-<div class="popup" ng-if="">
+<div class="popup" ng-if="" ng-controller="View3Ctrl" ng-app="myApp.view3">
     <div class="alert  animated bounceIn">
         <div class="alert-title"><span>提示</span><i class="iconfont icon-x" ng-click="close"></i></div>
         <div class="message">
@@ -7,6 +7,12 @@
         <div class="alert-btns"><span ng-click="close" ng-show="showCancel">取消</span><span ng-click="confirm">确定</span></div>
     </div>
 </div>
+<script src="view3.js">
+    var app = angular.module('myApp.view3',[]);
+    app.controller=('View3Ctrl',function ($scope) {
+
+    })
+</script>
 <style>
     .popup {
         width: 100%;

@@ -1,4 +1,4 @@
-<div>
+<div ng-controller="View1Ctrl" ng-app="myApp.view1">
     <table ng-if="qnss.length != 0">
         <thead>
         <tr>
@@ -10,9 +10,9 @@
         </thead>
         <tbody>
         <tr ng-for="qns in qnss">
-            <td>{{qns.title}}</td>
+            <td>{{ns.title}}</td>
             <td>deadline</td>
-            <td :class="statusStyle(qns)">{{statusText(qns)}}</td>
+            <td class="statusStyle(qns)">{{statusText(qns)}}</td>
             <td class="handle-btns"><span ng-if="qns.status == 0" ng-click="publish(qns)">发布问卷</span><span ng-if="qns.status == 0" ng-click="editQns(qns)">编辑问卷</span><span
                     ng-if="qns.status == 1" ng-click="fillQns(qns)">填写问卷</span><span ng-if="qns.status != 0" ng-click="viewData(qns)">查看数据</span><span
                     ng-click="delQns(qns)">删除问卷</span></td>
@@ -21,7 +21,11 @@
     </table>
     <my-alert :alert-message="alertMessage" ref="myAlert"></my-alert>
 </div>
-<script>
+<script src="view1.js">
+var app = angular.module('myApp.view1',[]);
+app.controller('View1Ctrl',function ($scope) {
+    $scope.toString();
+})
 
 </script>
 
