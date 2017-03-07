@@ -1,5 +1,5 @@
 <div class="new-qn">
-    <input class="title" type="text" autocomplete="off" placeholder="请填写问卷标题" ng-model="aQns.title">
+    <input class="title" type="text" autocomplete="off" placeholder="请填写问卷标题" ng-model="ns.title">
     <hr>
     <div class="qnlist" ng-for="(qn, index1) in aQns.qns">
         <div><span>{{'Q' + (index1 + 1) + '：'}}</span><input class="qn-title" type="text" ng-model="qn.question" @focus="select"></div>
@@ -55,6 +55,7 @@
         text-align: center;
 
     }
+
      /*分割线*/
     .hr {
            margin: 20px 0;
@@ -118,9 +119,10 @@
     .show {
          height: 55px;
      }
-    .div {
+    btn {
         display: inline-block;
-        margin: 0 10px;
+        margin:  10px;
+        color: #ef5b8d;
         padding: 10px 20px;
         background: #eee;
         border: 1px solid #ccc;

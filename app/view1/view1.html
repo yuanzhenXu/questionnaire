@@ -10,7 +10,7 @@
         </thead>
         <tbody>
         <tr ng-for="qns in qnss">
-            <td>title</td>
+            <td>{{qns.title}}</td>
             <td>deadline</td>
             <td :class="statusStyle(qns)">{{statusText(qns)}}</td>
             <td class="handle-btns"><span ng-if="qns.status == 0" ng-click="publish(qns)">发布问卷</span><span ng-if="qns.status == 0" ng-click="editQns(qns)">编辑问卷</span><span
@@ -21,6 +21,9 @@
     </table>
     <my-alert :alert-message="alertMessage" ref="myAlert"></my-alert>
 </div>
+<script>
+
+</script>
 
 <style lang="scss" scoped>
     td {
